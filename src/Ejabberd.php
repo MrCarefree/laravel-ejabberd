@@ -62,7 +62,7 @@ class Ejabberd
                 'auth' => [
                     $this->user, $this->password
                 ],
-                'json' => $command->getCommandData()
+                'query' => $command->getCommandData()
             ]);
             if ($this->debug) {
                 Log::info($command->getCommandName() . 'executed successfully.');
