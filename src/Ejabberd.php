@@ -57,6 +57,10 @@ class Ejabberd
             $response = $client->request('GET', $command_name, [
                 'headers' => [
                     'Accept' => 'application/json',
+                    'X-Admin' => true
+                ],
+                'auth' => [
+                    $this->user, $this->password
                 ],
                 'json' => $command->getCommandData()
             ]);
