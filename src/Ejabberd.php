@@ -72,7 +72,8 @@ class Ejabberd
             if ($this->debug) {
                 Log::info("Error occurred while executing the command " . $command->getCommandName() . ".");
             }
-            throw EjabberdException::networkException($e);
+//            throw EjabberdException::networkException($e);
+            throw $e;
         } catch (\Exception $e) {
             if ($this->debug) {
                 Log::info("Error occurred while executing the command " . $command->getCommandName() . ".");
