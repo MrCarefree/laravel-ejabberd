@@ -1,17 +1,21 @@
 {
-  "name": "kevin-kibet/laravel-ejabberd",
+  "name": "MrCarefree/laravel-ejabberd",
   "description": "Ejabbered API Wrapper for Laravel/lumen",
   "license": "MIT",
   "authors": [
     {
       "name": "kevin-kibet",
       "email": "kevynkybet@gmail.com"
+    },
+    {
+      "name": "Andrey Budiharja",
+      "email": "andreybudiharja4@gmail.com"
     }
   ],
   "require": {
-    "php": ">=5.5.9",
-    "guzzlehttp/guzzle": "^6.3",
-    "illuminate/support": "^5"
+    "php": ">=7.2",
+    "guzzlehttp/guzzle": "^7.2",
+    "illuminate/support": "^7.0"
   },
   "autoload": {
     "psr-4": {
