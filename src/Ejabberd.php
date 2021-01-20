@@ -48,6 +48,12 @@ class Ejabberd
      */
     public function execute(IEjabberdCommand $command)
     {
+        dump($this->api);
+        dump($this->api);
+        dump($this->api);
+        dump($this->api);
+        dump($this->api);
+        dd($this->api);
         $client = new Client([
             'verify' => false,
             'base_uri' => $this->api
