@@ -54,12 +54,9 @@ class Ejabberd
         ]);
         $command_name = $command->getCommandName();
         try {
-            $response = $client->request('POST', $command_name, [
+            $response = $client->request('GET', $command_name, [
                 'headers' => [
                     'Accept' => 'application/json',
-                ],
-                'auth' => [
-                    $this->user, $this->password
                 ],
                 'json' => $command->getCommandData()
             ]);
