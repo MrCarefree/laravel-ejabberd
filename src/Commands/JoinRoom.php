@@ -6,17 +6,17 @@ namespace Ejabberd\Commands;
 
 use Ejabberd\Commands\Contracts\IEjabberdCommand;
 
-class SendStanza implements IEjabberdCommand
+class JoinRoom implements IEjabberdCommand
 {
     private $from;
     private $to;
-    private $stanza;
+    private $service;
 
-    public function __construct($from, $to, $stanza)
+    public function __construct($from, $to, $service)
     {
         $this->from = $from;
         $this->to = $to;
-        $this->stanza = $stanza;
+        $this->service = $service;
     }
 
     public function getCommandName()
@@ -29,7 +29,7 @@ class SendStanza implements IEjabberdCommand
         return [
             'from' => $this->from,
             'to' => $this->to,
-            'stanza' => $this->stanza
+            'stanza' => "<presence from='{$this->from}' to='{$this->to}'> <x xmlns='{$this->service}'/> </presence>"
         ];
     }
 }
