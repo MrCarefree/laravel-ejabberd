@@ -54,7 +54,7 @@ class Ejabberd
         ]);
         $command_name = $command->getCommandName();
         try {
-            $response = $client->request('GET', $command_name, [
+            $response = $client->request('POST', $command_name, [
                 'headers' => [
                     'Accept' => 'application/json',
                     'X-Admin' => true
@@ -62,7 +62,7 @@ class Ejabberd
                 'auth' => [
                     $this->user, $this->password
                 ],
-                'query' => $command->getCommandData()
+                'json' => $command->getCommandData()
             ]);
             if ($this->debug) {
                 Log::info($command->getCommandName() . 'executed successfully.');
