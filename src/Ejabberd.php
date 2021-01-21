@@ -48,12 +48,6 @@ class Ejabberd
      */
     public function execute(IEjabberdCommand $command)
     {
-        dump($this->api);
-        dump($this->user);
-        dump($this->password);
-        dump($this->domain);
-        dump($this->conference_domain);
-        dd($this->debug);
         $client = new Client([
             'verify' => false,
             'base_uri' => $this->api
