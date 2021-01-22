@@ -24,6 +24,7 @@ class JoinLeaveRoom implements IEjabberdCommand
         $this->to = $to;
         $this->nick = $nick;
         $this->method = $method == 'join' ? '' : "type='unavailable'";
+
     }
 
     public function getCommandName()

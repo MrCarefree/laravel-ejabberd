@@ -8,13 +8,13 @@ use Ejabberd\Commands\Contracts\IEjabberdCommand;
 
 class GetUserResources implements IEjabberdCommand
 {
-    private $server;
     private $user;
+    private $host;
 
-    public function __construct($user, $server)
+    public function __construct($user, $host)
     {
         $this->user = $user;
-        $this->server = $server;
+        $this->host = $host;
     }
 
     public function getCommandName()
@@ -26,7 +26,7 @@ class GetUserResources implements IEjabberdCommand
     {
         return [
             'user' => $this->user,
-            'host' => $this->server
+            'host' => $this->host
         ];
     }
 }
