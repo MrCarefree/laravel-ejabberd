@@ -30,7 +30,7 @@ class GetChatList implements IEjabberdCommand
             'user' => $this->user,
             'host' => $this->host,
             'resource' => $this->resource,
-            'stanza' => "<iq type='get' id='iq_stanza_id'><inbox xmlns='urn:xmpp:inbox:1'/></iq>"
+            'stanza' => "<iq type='get'><inbox xmlns='urn:xmpp:inbox:1'/></iq>"
         ];
     }
 }
